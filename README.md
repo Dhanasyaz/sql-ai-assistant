@@ -2,8 +2,9 @@
 
 An intelligent SQL query assistant that converts natural language (text or speech) into SQL queries and automatically generates beautiful visualizations. Ask questions about your data in plain English, Hindi, Tamil, or 10+ other languages!
 
-<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/5e863490-190c-42f9-90bb-e840fb539a3b" />
 <img width="1915" height="920" alt="image" src="https://github.com/user-attachments/assets/add5dc94-2873-4479-bc22-6695e4edae79" />
+<img width="1920" height="921" alt="image" src="https://github.com/user-attachments/assets/5e863490-190c-42f9-90bb-e840fb539a3b" />
+
 
 ## ✨ Features
 
