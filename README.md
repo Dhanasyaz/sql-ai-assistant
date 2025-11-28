@@ -111,6 +111,7 @@ The project includes sample sales data. To set it up:
 3. Run the SQL from `sample_data.sql` in the SQL Editor
 4. Copy the connection string to your `.env` file
 
+Otherwise, you can use whichever database setup is most suitable for you.
 ### Sample Database Schema
 
 - **products** - Product catalog (name, category, price)
