@@ -11,18 +11,18 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="SQL Assistant", layout="wide")
 st.title("🧠 SQL-Powered Data Retrieval Assistant with Visualizations")
 
-# ----------------------------
+
 # Database Connection
-# ----------------------------
+
 @st.cache_resource
 def get_db_engine():
     return create_engine(DATABASE_URI)
 
 engine = get_db_engine()
 
-# ----------------------------
+
 # Visualization Function
-# ----------------------------
+
 def create_visualizations(df):
     """Auto-generate visualizations based on data"""
     if df.empty or len(df) == 0:
@@ -206,9 +206,9 @@ def create_visualizations(df):
         except Exception as e:
             st.info(f"Could not generate analysis chart: {str(e)}")
 
-# ----------------------------
+
 # Sidebar: Database Schema
-# ----------------------------
+
 with st.sidebar:
     st.header("📋 Database Schema")
     schema = get_db_schema(engine)
@@ -217,9 +217,9 @@ with st.sidebar:
     st.markdown("### 🎤 Tip")
     st.info("Use the microphone button to speak your query in your preferred language!")
 
-# ----------------------------
+
 # Main Content
-# ----------------------------
+
 col1, col2 = st.columns([4, 1])
 
 with col1:
@@ -281,9 +281,9 @@ with col_text:
         placeholder="e.g., Show me total sales by month"
     )
 
-# ----------------------------
+
 # Process Query
-# ----------------------------
+
 if nl_query:
     with open("prompt_template.txt") as f:
         template = f.read()
@@ -337,8 +337,7 @@ if nl_query:
         st.error(f"❌ Error running query: {e}")
         st.info("💡 Try rephrasing your question or check the SQL query above")
 
-# ----------------------------
+
 # Footer
-# ----------------------------
+
 st.markdown("---")
-st.markdown("Built with ❤️ using Streamlit, SQLAlchemy, and EURI LLM")
